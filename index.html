@@ -1,106 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learn Stock Market – Free Sessions</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<title>Radhika Telugu Trader</title>
 
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Learn Stock Market – Free Sessions">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop">
+<style>
 
-  <!-- Minimal CSS (inline for speed) -->
-  <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #66ffcc;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
-    }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
-    }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
-    }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
-    }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
-    }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
-  </style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#030b12;
+overflow:hidden;
+color:white;
+height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* ===== Animated Background ===== */
+
+.bg{
+position:fixed;
+inset:0;
+z-index:-3;
+
+background:
+linear-gradient(rgba(0,255,136,.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,136,.04) 1px, transparent 1px),
+radial-gradient(circle at center,#07201d 0%,#030b12 70%);
+
+background-size:25px 25px;
+
+animation:gridMove 15s linear infinite;
+}
+
+@keyframes gridMove{
+from{
+background-position:0 0;
+}
+to{
+background-position:25px 25px;
+}
+}
+
+/* ===== Glow ===== */
+
+.glow{
+position:fixed;
+width:250px;
+height:250px;
+background:#00ff8840;
+border-radius:50%;
+filter:blur(90px);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+z-index:-2;
+
+animation:glowFloat 5s ease-in-out infinite;
+}
+
+@keyframes glowFloat{
+0%,100%{
+transform:translate(-50%,-50%);
+}
+50%{
+transform:translate(-50%,-55%);
+}
+}
+
+/* ===== Infinite Ticker ===== */
+
+.ticker{
+height:42px;
+overflow:hidden;
+border-bottom:1px solid rgba(255,255,255,.05);
+background:#05141d;
+display:flex;
+align-items:center;
+}
+
+.ticker-track{
+display:flex;
+width:max-content;
+animation:ticker 18s linear infinite;
+}
+
+.ticker-track span{
+white-space:nowrap;
+padding-right:50px;
+font-size:11px;
+color:#00ff88;
+letter-spacing:1px;
+}
+
+@keyframes ticker{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-33.333%);
+}
+}
+
+/* ===== Hero ===== */
+
+.hero{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px;
+}
+
+.card{
+
+width:100%;
+max-width:350px;
+
+background:rgba(255,255,255,.03);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.05);
+
+border-radius:22px;
+
+padding:20px;
+
+text-align:center;
+
+animation:floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+0%,100%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+/* ===== Badge ===== */
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+
+padding:8px 15px;
+
+border-radius:30px;
+
+border:1px solid rgba(0,255,136,.2);
+
+color:#00ff88;
+
+font-size:10px;
+
+letter-spacing:2px;
+
+margin-bottom:15px;
+}
+
+.dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:#00ff88;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+50%{
+opacity:.3;
+}
+}
+
+/* ===== Heading ===== */
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:58px;
+line-height:1;
+margin-bottom:4px;
+}
+
+.sub{
+font-size:11px;
+letter-spacing:4px;
+color:#00ff88;
+margin-bottom:18px;
+}
+
+/* ===== Chart ===== */
+
+.chart{
+height:75px;
+margin-bottom:15px;
+}
+
+.chart svg{
+width:100%;
+height:100%;
+}
+
+.chart path{
+stroke-dasharray:1000;
+stroke-dashoffset:1000;
+
+animation:
+drawLine 3s ease forwards,
+glowLine 2s infinite alternate;
+}
+
+@keyframes drawLine{
+to{
+stroke-dashoffset:0;
+}
+}
+
+@keyframes glowLine{
+from{
+filter:drop-shadow(0 0 2px #00ff88);
+}
+to{
+filter:drop-shadow(0 0 10px #00ff88);
+}
+}
+
+/* ===== Description ===== */
+
+.desc{
+font-size:12px;
+line-height:1.7;
+color:#95a5ab;
+margin-bottom:15px;
+}
+
+/* ===== Stats ===== */
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+margin-bottom:15px;
+}
+
+.stat{
+padding:7px 10px;
+font-size:10px;
+background:#081923;
+border-radius:8px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+/* ===== Tags ===== */
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:6px;
+margin-bottom:15px;
+}
+
+.tag{
+padding:6px 10px;
+font-size:10px;
+border-radius:7px;
+border:1px solid rgba(0,255,136,.15);
+color:#88ffca;
+}
+
+/* ===== Button ===== */
+
+.btn{
+display:block;
+width:100%;
+
+padding:14px;
+
+background:linear-gradient(
+90deg,
+#00ff88,
+#00c96d
+);
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-size:13px;
+
+font-weight:700;
+
+color:#00180c;
+
+animation:btnPulse 2s infinite;
+}
+
+@keyframes btnPulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(0,255,136,.5);
+}
+
+70%{
+box-shadow:0 0 0 15px rgba(0,255,136,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(0,255,136,0);
+}
+}
+
+/* ===== Footer ===== */
+
+.footer{
+margin-top:12px;
+font-size:10px;
+color:#667981;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:480px){
+
+.card{
+max-width:320px;
+padding:18px;
+}
+
+h1{
+font-size:50px;
+}
+
+}
+
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2074304630173997');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2074304630173997&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
 </head>
+
 <body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Learn Stock Market – Free Sessions</h1>
-    <p class="sub">Education only – no investment advice</p>
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+<div class="bg"></div>
+<div class="glow"></div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+<!-- Infinite Ticker -->
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp59.html" rel="nofollow">Start Learning</a>
+<div class="ticker">
+<div class="ticker-track">
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+<span>🔥 NIFTY CALLS • 📈 BANKNIFTY • ⚡ INTRADAY • 🎯 OPTIONS • 🚀 FREE TELEGRAM •</span>
+<span>🔥 NIFTY CALLS • 📈 BANKNIFTY • ⚡ INTRADAY • 🎯 OPTIONS • 🚀 FREE TELEGRAM •</span>
+<span>🔥 NIFTY CALLS • 📈 BANKNIFTY • ⚡ INTRADAY • 🎯 OPTIONS • 🚀 FREE TELEGRAM •</span>
+<span>🔥 NIFTY CALLS • 📈 BANKNIFTY • ⚡ INTRADAY • 🎯 OPTIONS • 🚀 FREE TELEGRAM •</span>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+</div>
+</div>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+<section class="hero">
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<div class="card">
+
+<div class="badge">
+<div class="dot"></div>
+TELEGRAM FREE CHANNEL
+</div>
+
+<h1>Radhika</h1>
+
+<div class="sub">
+TELUGU TRADER™
+</div>
+
+<div class="chart">
+
+<svg viewBox="0 0 400 100">
+
+<path
+d="M10 80 L60 70 L110 65 L180 48 L250 38 L320 30 L390 18"
+fill="none"
+stroke="#00ff88"
+stroke-width="3"
+/>
+
+</svg>
+
+</div>
+
+<div class="desc">
+Daily NIFTY, BANKNIFTY, Options and Intraday calls for Telugu traders. Fast alerts directly on Telegram.
+</div>
+
+<div class="stats">
+
+<div class="stat">NIFTY ▲ 23842</div>
+
+<div class="stat">BANKNIFTY ▲ 51204</div>
+
+<div class="stat">SENSEX ▼ 78502</div>
+
+</div>
+
+<div class="tags">
+
+<div class="tag">Intraday</div>
+<div class="tag">Options</div>
+<div class="tag">Swing</div>
+<div class="tag">Alerts</div>
+<div class="tag">Telugu</div>
+
+</div>
+
+<a href="https://t.me/+sKisCp1mt5kxNjZl" class="btn">
+🚀 JOIN FREE TELEGRAM
+</a>
+
+<div class="footer">
+Market Live • Active Members
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const glow=document.querySelector('.glow');
+
+document.addEventListener('mousemove',(e)=>{
+
+const x=(e.clientX/window.innerWidth)*30;
+const y=(e.clientY/window.innerHeight)*30;
+
+glow.style.left=`calc(50% + ${x}px)`;
+glow.style.top=`calc(50% + ${y}px)`;
+
+});
+
+</script>
+
 </body>
 </html>
